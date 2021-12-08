@@ -49,9 +49,9 @@ Future<void> init() async {
         getTextMessagesUseCase: sl.call(),
         sendTextMessageUseCase: sl.call(),
       ));
-  sl.registerFactory<MyChatCubit>(() => MyChatCubit(
-      getMyChatUseCase: sl.call()));
-
+  sl.registerFactory<MyChatCubit>(
+      () => MyChatCubit(getMyChatUseCase: sl.call()));
+//
   sl.registerFactory<UserCubit>(() => UserCubit(
         getAllUserUseCase: sl.call(),
         createOneToOneChatChannelUseCase: sl.call(),
